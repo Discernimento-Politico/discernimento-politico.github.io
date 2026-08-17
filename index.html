@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Discernimento — Ciência, História e Mecânica Econômica Real</title>
+  <meta name="description" content="Um guia fundamentado em dados, história e ciência econômica para superar o tribalismo ideológico, desmistificar dogmas do passado e entender como as sociedades realmente prosperam.">
+  <meta name="keywords" content="ciência política, mecânica econômica, liberalismo clássico, social-democracia, fascismo, DAF, instituições inclusivas, Thomas Sowell, Friedrich Hayek, Daron Acemoglu, Norberto Bobbio">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="O Discernimento — Guia de Ciência Política e Econômica">
+  <meta property="og:description" content="Um guia fundamentado em dados, história e ciência econômica para superar o tribalismo ideológico e entender como as sociedades prosperam.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="#hero" class="logo-link" title="Retornar ao início">
+        <span class="logo-mark">§</span>
+        <span class="logo-text">O Discernimento</span>
+      </a>
+
+      <!-- Desktop Navigation (Compact & Non-Wrapping) -->
+      <nav class="nav-wrapper" aria-label="Capítulos Principais">
+        <ul class="nav-links">
+          <li><a href="#diagnostico-1789" class="nav-link">I. Diagnóstico</a></li>
+          <li><a href="#modulo-1-economia" class="nav-link">II. Mecânica</a></li>
+          <li><a href="#modulo-2-fossils" class="nav-link">III. Dossiês</a></li>
+          <li><a href="#modulo-3-matriz" class="nav-link">IV. Ideologias</a></li>
+          <li><a href="#modulo-5-simulador" class="nav-link">V. Falhas Políticas</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="action-btn btn-toc" id="tocTriggerBtn" title="Abrir Sumário Completo do Tratado">
+          Sumário
+        </button>
+        <button class="action-btn" id="searchTriggerBtn" title="Buscar no Tratado (Ctrl + K)">
+          Buscar
+        </button>
+        <button class="action-btn" id="themeToggleBtn" title="Alternar Modo Escuro / Claro" style="min-width: 110px;">
+          <span id="themeIcon">Tema Escuro</span>
+        </button>
+        <button class="action-btn mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir Menu">
+          Menu
+        </button>
+      </div>
+    </div>
+
+    <!-- Reading Progress Bar -->
+    <div class="progress-bar-container">
+      <div class="progress-bar-fill" id="progressBarFill"></div>
+    </div>
+  </header>
+
+  <!-- Table of Contents (Sumário Completo) Drawer -->
+  <div class="toc-backdrop" id="tocBackdrop">
+    <div class="toc-drawer" id="tocDrawer">
+      <div class="toc-header">
+        <div>
+          <span class="academic-tag sepia">Índice do Tratado</span>
+          <h4 style="margin: var(--space-1) 0 0; font-family: var(--font-serif); font-size: 1.25rem;">Sumário Completo</h4>
+        </div>
+        <button class="drawer-close-btn" id="tocCloseBtn" aria-label="Fechar Sumário">✕</button>
+      </div>
+      <div class="toc-body">
+        <ul class="toc-list">
+          <li class="toc-item">
+            <span class="toc-item-num">Prólogo Metodológico</span>
+            <a href="#hero" class="toc-link">O Pacto de Honestidade Intelectual</a>
+            <div class="toc-item-desc">Termo de isenção e princípio da caridade intelectual (*Steel-Manning*).</div>
+          </li>
+          <li class="toc-item">
+            <span class="toc-item-num">Capítulo I</span>
+            <a href="#diagnostico-1789" class="toc-link">A Prisão Cognitiva de 1789</a>
+            <div class="toc-item-desc">A obsolescência da régua unidimensional da Revolução Francesa.</div>
+          </li>
+          <li class="toc-item">
+            <span class="toc-item-num">Capítulo II</span>
+            <a href="#modulo-1-economia" class="toc-link">Mecânica Econômica vs. Ideologia</a>
+            <div class="toc-item-desc">O sistema de preços de Hayek, destruição criativa e o cálculo econômico de Mises.</div>
+          </li>
+          <li class="toc-item">
+            <span class="toc-item-num">Capítulo III</span>
+            <a href="#modulo-2-fossils" class="toc-link">Dossiês Históricos & Autópsias Forenses</a>
+            <div class="toc-item-desc">Alemanha Nazista (DAF), Marxismo Soviético, Mercantilismo, China de 1978 e Modelo Nórdico.</div>
+          </li>
+          <li class="toc-item">
+            <span class="toc-item-num">Capítulo IV</span>
+            <a href="#modulo-3-matriz" class="toc-link">Matriz Comparativa de Ideologias</a>
+            <div class="toc-item-desc">Comparador direto lado a lado e fichas técnicas de 6 correntes sob critérios universais.</div>
+          </li>
+          <li class="toc-item">
+            <span class="toc-item-num">Capítulo V</span>
+            <a href="#modulo-4-instituicoes" class="toc-link">Engenharia Institucional & A Indústria do Ruído</a>
+            <div class="toc-item-desc">Instituições inclusivas de Acemoglu & Robinson (Nobel 2024) e Teoria da Escolha Pública.</div>
+          </li>
+          <li class="toc-item">
+            <span class="toc-item-num">Capítulo VI</span>
+            <a href="#modulo-5-simulador" class="toc-link">Onde a Esquerda e a Direita Erram na Prática</a>
+            <div class="toc-item-desc">Anatomia direta dos erros econômicos clássicos e ilusões de ambos os espectros.</div>
+          </li>
+          <li class="toc-item">
+            <span class="toc-item-num">Capítulo VII</span>
+            <a href="#modulo-6-glossario" class="toc-link">Glossário de Conceitos Político-Econômicos</a>
+            <div class="toc-item-desc">Definições rigorosas para desarmar distorções semânticas contemporâneas.</div>
+          </li>
+          <li class="toc-item">
+            <span class="toc-item-num">Capítulo VIII</span>
+            <a href="#modulo-7-bibliografia" class="toc-link">Compêndio Bibliográfico & Fontes Primárias</a>
+            <div class="toc-item-desc">Catálogo de referências canônicas e documentos históricos validados.</div>
+          </li>
+          <li class="toc-item">
+            <span class="toc-item-num">Epílogo</span>
+            <a href="#choque-realidade" class="toc-link">A Puxada para a Realidade</a>
+            <div class="toc-item-desc">Por que dogmas de 1789 não servem para governar o Século XXI.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <a href="#diagnostico-1789" class="mobile-nav-link">Capítulo I. O Diagnóstico de 1789</a>
+    <a href="#modulo-1-economia" class="mobile-nav-link">Capítulo II. Mecânica vs. Ideologia</a>
+    <a href="#modulo-2-fossils" class="mobile-nav-link">Capítulo III. Dossiês Históricos</a>
+    <a href="#modulo-3-matriz" class="mobile-nav-link">Capítulo IV. Matriz de Ideologias</a>
+    <a href="#modulo-4-instituicoes" class="mobile-nav-link">Capítulo V. Mecânica Institucional</a>
+    <a href="#modulo-5-simulador" class="mobile-nav-link">Capítulo VI. Onde a Esquerda e a Direita Erram</a>
+    <a href="#modulo-6-glossario" class="mobile-nav-link">Capítulo VII. Glossário de Conceitos</a>
+    <a href="#modulo-7-bibliografia" class="mobile-nav-link">Capítulo VIII. Compêndio Bibliográfico</a>
+    <a href="#choque-realidade" class="mobile-nav-link">Epílogo. A Puxada para a Realidade</a>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container container-editorial">
+
+        <h1 class="hero-title">
+          O Discernimento
+        </h1>
+
+        <p class="hero-subtitle">
+          Um guia fundamentado em <strong>dados, história e ciência econômica</strong> para superar o tribalismo ideológico, desmistificar dogmas do passado e entender como as sociedades realmente prosperam.
+        </p>
+
+        <!-- PACTO DE HONESTIDADE INTELECTUAL (CHARTER COM ESTADO COLAPSÁVEL APÓS ACEITE) -->
+        <div class="pacto-charter" id="pactoCard">
+          <div class="pacto-charter-header" id="pactoHeader">
+            <div>
+              <span class="section-numeral" id="pactoNumeral">Termo de Isenção e Compromisso Metodológico</span>
+              <h3 id="pactoTitle">O Pacto de Honestidade Intelectual</h3>
+            </div>
+            <div class="pacto-header-actions" id="pactoHeaderActions">
+              <span class="pacto-status-tag" id="pactoStatusTag">
+                Princípio da Caridade Intelectual (Steel-Manning)
+              </span>
+              <button class="action-btn btn-sm pacto-toggle-btn" id="pactoToggleBtn" style="display: none;">
+                Ver Termos ▾
+              </button>
+            </div>
+          </div>
+
+          <div class="pacto-collapsible-content" id="pactoCollapsibleContent">
+            <div class="pacto-articles-list">
+              <div class="pacto-article">
+                <div class="pacto-article-num">Artigo I. Ausência de Proselitismo</div>
+                <h4>Imparcialidade Institucional</h4>
+                <p>Este espaço não serve para angariar votos, promover partidos ou rotular adversários com espantalhos morais. O objetivo é a análise de causa e efeito.</p>
+              </div>
+              <div class="pacto-article">
+                <div class="pacto-article-num">Artigo II. Desconforto Equitativo</div>
+                <h4>Confronto com Fatos Documentados</h4>
+                <p>O leitor de esquerda confrontará a inviabilidade do planejamento central e o papel do mercado; o leitor de direita confrontará a falsidade de revisionismos e a captura do Estado por oligopólios de compadrio.</p>
+              </div>
+              <div class="pacto-article">
+                <div class="pacto-article-num">Artigo III. O Método Científico</div>
+                <h4>O Desconforto como Sintoma da Razão</h4>
+                <p>Quando um dado histórico abala uma convicção prévia, isso não é um ataque à dignidade do leitor — é o método científico desmantelando um dogma.</p>
+              </div>
+              <div class="pacto-article">
+                <div class="pacto-article-num">Artigo IV. Rigor Forense</div>
+                <h4>Leitura Desarmada</h4>
+                <p>Convida-se o leitor a analisar cada conceito com a mesma serenidade aplicada ao exame de uma equação matemática ou de uma autópsia histórica.</p>
+              </div>
+            </div>
+
+            <div class="pacto-charter-footer" id="pactoFooter">
+              <span style="font-size: 0.88rem; color: var(--text-secondary);">
+                Para acessar os capítulos e dados do tratado, confirme sua disposição para uma leitura analítica desarmada.
+              </span>
+              <button class="btn btn-sepia" id="acceptPactoBtn">
+                Firmar Pacto e Destravar o Tratado
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTEÚDO RESTRITO (DESTRAVADO APÓS FIRMAR O PACTO) -->
+    <div id="manifestoBody" class="manifesto-locked-content is-locked">
+
+    <!-- SECTION 1: O DIAGNÓSTICO DE 1789 -->
+    <section class="section" id="diagnostico-1789">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-numeral">Capítulo I. Diagnóstico Civilizatório</span>
+          <h2>A Prisão Cognitiva de 1789</h2>
+          <p class="lead">
+            Por que o debate contemporâneo permanece aprisionado a uma divisão parlamentar francesa estabelecida há mais de <strong>230 anos</strong>?
+          </p>
+        </div>
+
+        <div class="paradigm-layout">
+          <!-- Modelo Arcaico 1D -->
+          <div class="paradigm-column archaic">
+            <div class="paradigm-column-header">
+              <span class="academic-tag">Século XVIII — Modelo Arcaico</span>
+              <h3>O Eixo Unidimensional de Polarização</h3>
+            </div>
+            <p>
+              Em 1789, deputados franceses pró-monarquia posicionaram-se à direita e revolucionários à esquerda na Assembleia Nacional. Tentar comprimir a complexidade de redes econômicas modernas nessa linha reta é uma limitação analítica:
+            </p>
+
+            <div class="paradigm-visual-schema">
+              <div style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; margin-bottom: var(--space-2);">
+                Esquema Unidimensional de Atrito Tribal
+              </div>
+              <div class="schema-axis-1d">
+                <div class="schema-axis-line"></div>
+                <div class="schema-axis-node">Esquerda (Coletivo)</div>
+                <div class="schema-axis-node">Conflito de Slogans</div>
+                <div class="schema-axis-node">Direita (Tradição)</div>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--accent-crimson); margin-top: var(--space-2);">
+                Consequência: Redução da política a um tribunal de paixões morais que impede a avaliação técnica de resultados.
+              </div>
+            </div>
+
+            <p style="font-size: 0.95rem;">
+              <strong>O Eixo Conceitual de Norberto Bobbio (1994):</strong> A ciência política canônica define a Esquerda pela postura de combater desigualdades sociais tidas como artificiais e opressivas; e a Direita pelo reconhecimento de hierarquias e diferenças individuais como naturais ou funcionais para a ordem social.
+            </p>
+          </div>
+
+          <!-- Modelo Moderno 2D -->
+          <div class="paradigm-column modern">
+            <div class="paradigm-column-header">
+              <span class="academic-tag sepia">Século XXI — Engenharia de Sistemas</span>
+              <h3>A Matriz Institucional e de Incentivos</h3>
+            </div>
+            <p>
+              As sociedades não prosperam por virtude de rótulos partidários, mas pela solidez de suas regras institucionais (*Daron Acemoglu & James Robinson - Nobel 2024*). A verdadeira régua civilizatória divide-se em:
+            </p>
+
+            <div class="paradigm-visual-schema">
+              <div class="schema-grid-2d">
+                <div class="schema-grid-cell">
+                  <strong style="color: var(--accent-crimson);">Extrativismo & Compadrio</strong>
+                  Oligopólios protegidos por lei, monopólios estatais e tributação inflacionária via canetada.
+                </div>
+                <div class="schema-grid-cell">
+                  <strong style="color: var(--accent-sage);">Instituições Inclusivas</strong>
+                  Direitos de propriedade universais, livre concorrência e império da lei (*rule of law*).
+                </div>
+                <div class="schema-grid-cell">
+                  <strong>Planejamento Central</strong>
+                  Colapso do cálculo de preços (*Ludwig von Mises*) e racionamento burocrático.
+                </div>
+                <div class="schema-grid-cell">
+                  <strong style="color: var(--accent-primary);">Livre Concorrência & Bem-Estar</strong>
+                  Base capitalista hiperprodutiva sustentando serviços públicos universais.
+                </div>
+              </div>
+            </div>
+
+            <p style="font-size: 0.95rem;">
+              <strong>A Nova Consciência:</strong> O cidadão emancipado não pergunta qual é a cor do partido, mas sim: <em>"essa política estimula a produção real ou concentra privilégios para grupos de compadrio?"</em>
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: MÓDULO 1 — FERRAMENTA ECONÔMICA VS IDEOLOGIA POLÍTICA -->
+    <section class="section" id="modulo-1-economia" style="background: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-numeral">Capítulo II. Mecânica Econômica</span>
+          <h2>O Erro de Categoria: Ferramenta vs. Ideologia</h2>
+          <p class="lead">
+            O capitalismo não é uma religião, filosofia moral ou pacote partidário. É um <strong>mecanismo descentralizado de alocação de recursos</strong> e processamento de informações escassas.
+          </p>
+        </div>
+
+        <div class="mechanics-grid">
+          <!-- Card 1: Hayek -->
+          <div class="mechanics-card">
+            <div>
+              <div class="mechanics-card-meta">Friedrich A. Hayek — Prêmio Nobel 1974</div>
+              <h3>O Sistema de Preços como Rede de Dados</h3>
+              <p>
+                Em *O Uso do Conhecimento na Sociedade (1945)*, Hayek demonstrou que o conhecimento econômico relevante encontra-se disperso na mente de milhões de indivíduos. Nenhum planejador central é capaz de centralizá-lo.
+              </p>
+            </div>
+            <div class="mechanics-card-highlight">
+              <strong>Mecânica Operacional:</strong> Os preços funcionam como pacotes de dados compactados. Quando a cotação de uma matéria-prima sobe, o mercado comunica instantaneamente a escassez, coordenando o consumo global sem necessidade de ordens burocráticas.
+            </div>
+          </div>
+
+          <!-- Card 2: Schumpeter -->
+          <div class="mechanics-card">
+            <div>
+              <div class="mechanics-card-meta">Joseph Schumpeter — Teoria da Inovação</div>
+              <h3>A Destruição Criativa</h3>
+              <p>
+                O capitalismo progride não pela preservação de estruturas antigas, mas pela renovação constante. Empresas e métodos obsoletos devem quebrar para liberar capital e trabalho para novas tecnologias que barateiem o custo de vida.
+              </p>
+            </div>
+            <div class="mechanics-card-highlight">
+              <strong>Mecânica Operacional:</strong> Salvar empresas ineficientes por meio de subsídios públicos paralisa o desenvolvimento e condena a sociedade à estagnação tecnológica e ao encarecimento de serviços.
+            </div>
+          </div>
+
+          <!-- Card 3: Mises -->
+          <div class="mechanics-card">
+            <div>
+              <div class="mechanics-card-meta">Ludwig von Mises — Ação Humana (1920)</div>
+              <h3>O Problema do Cálculo Econômico</h3>
+              <p>
+                Ao estatizar todos os meios de produção e abolir o mercado, o Estado elimina a formação espontânea de preços para bens de capital (máquinas, terras e energia).
+              </p>
+            </div>
+            <div class="mechanics-card-highlight">
+              <strong>Mecânica Operacional:</strong> Sem preços reais de mercado, torna-se matematicamente impossível calcular custos de produção. O resultado inevitável de economias planificadas é a escassez crônica, filas e desperdício maciço de recursos.
+            </div>
+          </div>
+
+          <!-- Card 4: Sowell -->
+          <div class="mechanics-card">
+            <div>
+              <div class="mechanics-card-meta">Thomas Sowell — Economia Básica</div>
+              <h3>A Lei dos Trade-offs & Ilusão Monetária</h3>
+              <p>
+                Não existem "soluções gratuitas" na esfera pública; existem apenas concessões (*trade-offs*). Riqueza real consiste em bens materiais produzidos (alimentos, moradia, tecnologia), e não em papel-moeda emitido por governos.
+              </p>
+            </div>
+            <div class="mechanics-card-highlight">
+              <strong>Mecânica Operacional:</strong> Emitir moeda sem aumento correspondente na produção apenas dilui o poder de compra da população via inflação — o tributo mais regressivo e perverso contra as classes assalariadas.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: MÓDULO 2 — DOSSIÊS HISTÓRICOS (AUTÓPSIAS FORENSES) -->
+    <section class="section" id="modulo-2-fossils">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-numeral">Capítulo III. Autópsias Forenses</span>
+          <h2>A Anatomia dos Fósseis Ideológicos</h2>
+          <p class="lead">
+            A história é o laboratório empírico da ciência política. Explore os dossiês documentados de cinco grandes modelos sob <strong>três camadas analíticas</strong>.
+          </p>
+        </div>
+
+        <!-- Timeline Navigation Tabs -->
+        <div class="dossier-timeline-nav" id="timelineTabs">
+          <!-- Dynamically populated by fossils.js -->
+        </div>
+
+        <!-- Dossier Dynamic Container -->
+        <div id="autopsyContent">
+          <!-- Dynamically populated by fossils.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: MÓDULO 3 — GUIA DIRETO DAS IDEOLOGIAS -->
+    <section class="section" id="modulo-3-matriz" style="background: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-numeral">Capítulo IV. O que Cada Uma Realmente Defende</span>
+          <h2>Guia Desmistificador de Ideologias</h2>
+          <p class="lead">
+            Sem jargões complicados: clique em qualquer corrente política para entender <strong>o que ela prega no papel</strong> e <strong>o que de fato aconteceu quando foi aplicada na história real</strong>.
+          </p>
+        </div>
+
+        <!-- Ideology Simple Tabs -->
+        <div class="ideology-tabs-bar" id="ideologyTabsNav">
+          <!-- Dynamically populated by matrix.js -->
+        </div>
+
+        <!-- Dynamic Card Display (Zero Rolagem Lateral) -->
+        <div id="ideologyCardDisplay">
+          <!-- Dynamically populated by matrix.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: MÓDULO 4 — MECÂNICA INSTITUCIONAL -->
+    <section class="section" id="modulo-4-instituicoes">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-numeral">Capítulo V. Engenharia Institucional</span>
+          <h2>Mecânica Institucional & A Indústria do Ruído</h2>
+          <p class="lead">
+            Por que as sociedades prosperam ou entram em colapso? A resposta reside nas regras do jogo e nos incentivos de quem detém o poder coercitivo do Estado.
+          </p>
+        </div>
+
+        <div class="mechanics-grid">
+          <!-- Card 1: Acemoglu & Robinson -->
+          <div class="mechanics-card">
+            <div>
+              <div class="mechanics-card-meta">Daron Acemoglu & James Robinson — Nobel 2024</div>
+              <h3>Instituições Inclusivas vs. Extrativas</h3>
+              <p>
+                <strong>Inclusivas:</strong> Asseguram direitos de propriedade para todos os cidadãos, mantêm o império da lei impessoal e garantem livre entrada para novos inovadores no mercado.<br><br>
+                <strong>Extrativas:</strong> Desenhadas para extrair renda de quem produz e concentrá-la em uma oligarquia burocrática ou corporativa protegida.
+              </p>
+            </div>
+            <div class="mechanics-card-highlight">
+              <strong>Tese Central:</strong> Nações não fracassam por determinismo geográfico ou cultural, mas porque suas instituições foram desenhadas para enriquecer uma elite às custas do povo produtor.
+            </div>
+          </div>
+
+          <!-- Card 2: Buchanan & Olson -->
+          <div class="mechanics-card">
+            <div>
+              <div class="mechanics-card-meta">James Buchanan (Nobel 1986) & Mancur Olson</div>
+              <h3>Teoria da Escolha Pública</h3>
+              <p>
+                Agentes políticos e burocratas não atuam por altruísmo desinteressado; respondem a incentivos de sobrevivência eleitoral e expansão de poder institucional.
+              </p>
+            </div>
+            <div class="mechanics-card-highlight">
+              <strong>Mecânica:</strong> O sistema premia políticas com benefícios imediatos e concentrados para grupos organizados de pressão, repassando os custos difusos para o restante da população via dívida e tributação.
+            </div>
+          </div>
+
+          <!-- Card 3: Taleb -->
+          <div class="mechanics-card">
+            <div>
+              <div class="mechanics-card-meta">Nassim Nicholas Taleb — Sistemas Complexos</div>
+              <h3>Antifragilidade & Pele em Risco</h3>
+              <p>
+                A economia constitui um sistema complexo e adaptativo. Intervenções burocráticas centralizadas acumulam fragilidades ocultas porque os tomadores de decisão não arcam com o custo pessoal de seus erros (*Skin in the Game*).
+              </p>
+            </div>
+            <div class="mechanics-card-highlight">
+              <strong>Mecânica:</strong> Redes descentralizadas de livre iniciativa corrigem erros com rapidez; a centralização estatal retarda a correção até que uma ruptura catastrófica ocorra.
+            </div>
+          </div>
+        </div>
+
+        <!-- Smoke Screen Callout -->
+        <div class="editorial-panel" style="margin-top: var(--space-10); border-left: 3px solid var(--accent-crimson);">
+          <span class="section-numeral" style="color: var(--accent-crimson);">A Indústria da Distração</span>
+          <h3 style="margin-bottom: var(--space-3);">A Polarização como Cortina de Fumaça</h3>
+          <p style="margin-bottom: 0; color: var(--text-secondary);">
+            Fomentar guerras culturais maniqueístas entre a população é a estratégia mais eficiente para desviar o escrutínio público da ineficiência estrutural. Enquanto os cidadãos despendem energia combatendo espantalhos retóricos, a máquina estatal perpetua privilégios corporativos, cartéis regulatórios e déficits fiscais que penalizam a sociedade produtiva.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: MÓDULO 5 — ANATOMIA DAS FALHAS POLÍTICAS (ESQUERDA VS DIREITA) -->
+    <section class="section" id="modulo-5-simulador" style="background: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-numeral">Capítulo VI. Confronto com a Realidade</span>
+          <h2>Onde a Esquerda e a Direita Erram na Prática</h2>
+          <p class="lead">
+            Nenhuma ideologia possui o monopólio da virtude ou a imunidade contra as leis da escassez. Veja os <strong>erros econômicos clássicos de cada lado</strong>, a mecânica real do fracasso e seus precedentes históricos.
+          </p>
+        </div>
+
+        <div class="failures-split-layout">
+          <!-- Coluna Esquerda -->
+          <div class="failure-column left-col">
+            <div class="failure-column-header">
+              <span class="failure-badge left">Campo Progressista / Coletivista</span>
+              <h3>As Ilusões Típicas da Esquerda</h3>
+            </div>
+            <div id="leftFailuresList">
+              <!-- Dynamically populated by simulator.js -->
+            </div>
+          </div>
+
+          <!-- Coluna Direita -->
+          <div class="failure-column right-col">
+            <div class="failure-column-header">
+              <span class="failure-badge right">Campo Conservador / Corporativista</span>
+              <h3>As Ilusões Típicas da Direita</h3>
+            </div>
+            <div id="rightFailuresList">
+              <!-- Dynamically populated by simulator.js -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 7: MÓDULO 6 — GLOSSÁRIO DESMISTIFICADOR -->
+    <section class="section" id="modulo-6-glossario">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-numeral">Capítulo VII. Rigor Semântico</span>
+          <h2>Glossário de Conceitos Político-Econômicos</h2>
+          <p class="lead">
+            Definições conceituais fundamentadas para desarmar distorções semânticas e restaurar a precisão no debate público.
+          </p>
+        </div>
+
+        <div style="max-width: 520px; margin: 0 auto var(--space-8);">
+          <input type="text" id="glossarySearch" class="matrix-search-box" style="width: 100%;" placeholder="Buscar conceito no glossário...">
+        </div>
+
+        <div class="glossary-stack" id="glossaryGrid">
+          <!-- Dynamically populated by glossary.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 8: MÓDULO 7 — COMPÊNDIO BIBLIOGRÁFICO -->
+    <section class="section" id="modulo-7-bibliografia" style="background: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-numeral">Capítulo VIII. Referencial Acadêmico</span>
+          <h2>Compêndio Bibliográfico & Fontes Primárias</h2>
+          <p class="lead">
+            As teses deste tratado fundamentam-se no trabalho de historiadores canônicos, clássicos da filosofia política e economistas laureados com o Prêmio Nobel.
+          </p>
+        </div>
+
+        <div class="biblio-filter-bar" style="justify-content: center;">
+          <button class="biblio-tab-btn active" data-category="all">Todas as Obras</button>
+          <button class="biblio-tab-btn" data-category="instituicoes">Instituições (Nobel)</button>
+          <button class="biblio-tab-btn" data-category="historia">Historiografia do Terceiro Reich</button>
+          <button class="biblio-tab-btn" data-category="economia">Mecânica Econômica & Preços</button>
+          <button class="biblio-tab-btn" data-category="ciencia-politica">Ciência Política & Totalitarismo</button>
+        </div>
+
+        <div class="biblio-entries-grid" id="biblioGrid">
+          <!-- Dynamically populated by sources.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EPÍLOGO: A PUXADA PARA A REALIDADE -->
+    <section class="section" id="choque-realidade">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-numeral">Epílogo. A Puxada para a Realidade</span>
+          <h2>O Choque Anacrônico do Século XXI</h2>
+          <p class="lead">
+            Você percorreu os dossiês históricos, os mecanismos econômicos, as ideologias com seus acertos e fracassos, e a mecânica institucional que separa nações prósperas de nações estagnadas. Agora, a pergunta final:
+          </p>
+        </div>
+
+        <div class="reality-monograph">
+          <p class="lead" style="margin-bottom: var(--space-4);">
+            Por que insistimos em governar a era da inteligência artificial, criptografia, biotecnologia e redes distribuídas com dogmas formulados por homens que andavam em carruagens a vapor (1848) ou lutavam em trincheiras com baionetas (1914)?
+          </p>
+          <p>
+            As grandes ideologias que hoje monopolizam a retórica política não constituem verdades transcendentais. São respostas desesperadas a traumas históricos específicos de séculos passados. Tratá-las como soluções contemporâneas é um colapso de discernimento técnico.
+          </p>
+
+          <div class="reality-metrics-row">
+            <div class="reality-metric-item">
+              <div class="reality-metric-val">237 Anos</div>
+              <div class="reality-metric-label">Idade do eixo de 1789 que ainda asfixia o debate no parlamento e na mídia.</div>
+            </div>
+            <div class="reality-metric-item">
+              <div class="reality-metric-val">8 Bilhões</div>
+              <div class="reality-metric-label">De nós descentralizados que não podem ser coordenados por um comitê burocrático central.</div>
+            </div>
+            <div class="reality-metric-item">
+              <div class="reality-metric-val">0 Nações</div>
+              <div class="reality-metric-label">Prósperas no globo que abandonaram a mecânica de preços livres e propriedade privada.</div>
+            </div>
+            <div class="reality-metric-item">
+              <div class="reality-metric-val">100%</div>
+              <div class="reality-metric-label">Dos experimentos de congelamento de preços na história humana que geraram desabastecimento.</div>
+            </div>
+          </div>
+
+          <p style="font-size: 1.1rem; margin-top: var(--space-8); text-align: center; color: var(--text-primary); font-family: var(--font-serif); font-weight: 500;">
+            O cidadão emancipado não pergunta qual é a cor do partido.<br>
+            Pergunta: <em>"essa política estimula a produção real ou concentra privilégios para grupos de compadrio?"</em>
+          </p>
+        </div>
+
+      </div>
+    </section>
+    
+    </div> <!-- /#manifestoBody -->
+
+  </main>
+
+  <!-- Archival Drawer / Modal for Primary Sources -->
+  <div class="drawer-backdrop" id="drawerBackdrop">
+    <div class="drawer-panel" id="drawerPanel">
+      <div class="drawer-header">
+        <span class="academic-tag">Consulta de Arquivo Histórico</span>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Fechar Arquivo">✕</button>
+      </div>
+      <div class="drawer-body" id="drawerBody">
+        <!-- Dynamically populated by sources.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Search Modal -->
+  <div class="search-modal-backdrop" id="searchModalBackdrop">
+    <div class="search-modal-panel">
+      <div class="search-input-header">
+        <input type="text" id="searchModalInput" class="search-modal-input" placeholder="Digite para consultar conceitos, autores ou dossiês históricos...">
+      </div>
+      <div class="search-modal-results" id="searchModalResults">
+        <!-- Dynamically populated by main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER (COLOPHON) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-brand">
+          <h4>O Discernimento</h4>
+          <p style="font-size: 0.95rem; line-height: 1.65; color: var(--text-secondary);">
+            Tratado analítico independente concebido para resgatar a solidez do método científico, a evidência documental e a compreensão das instituições humanas no Século XXI.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Estrutura do Tratado</h5>
+          <ul class="footer-links-list">
+            <li><a href="#diagnostico-1789">Diagnóstico de 1789</a></li>
+            <li><a href="#modulo-1-economia">Mecânica Econômica</a></li>
+            <li><a href="#modulo-2-fossils">Dossiês Históricos</a></li>
+            <li><a href="#modulo-3-matriz">Matriz de Ideologias</a></li>
+            <li><a href="#modulo-4-instituicoes">Mecânica Institucional</a></li>
+            <li><a href="#choque-realidade">Epílogo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Instrumentos & Dados</h5>
+          <ul class="footer-links-list">
+            <li><a href="#modulo-5-simulador">Falhas Políticas</a></li>
+            <li><a href="#modulo-6-glossario">Glossário de Conceitos</a></li>
+            <li><a href="#modulo-7-bibliografia">Compêndio Bibliográfico</a></li>
+            <li><a href="#hero">Pacto de Honestidade</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-colophon-bottom">
+        <div>
+          Tratado de Acesso Aberto fundamentado em fontes primárias documentais e consenso historiográfico.
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 0.78rem;">
+          Construído para a emancipação analítica do cidadão real.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/fossils.js"></script>
+  <script src="js/matrix.js"></script>
+  <script src="js/simulator.js"></script>
+  <script src="js/glossary.js"></script>
+  <script src="js/sources.js"></script>
+  <script src="js/tooltips.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+/* Reset & Foundations */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Evita que o cabeçalho fixo cubra os títulos ao navegar por âncoras/scroll */
+*[id] {
+  scroll-margin-top: calc(var(--header-height) + var(--space-4));
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.75;
+  font-weight: 400;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Hierarchy (Academic & Monograph Scale) */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-5);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  margin-bottom: var(--space-3);
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin-bottom: var(--space-5);
+  color: var(--text-secondary);
+  font-size: 1.0625rem; /* 17px */
+  line-height: 1.8;
+}
+
+p.lead {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+  line-height: 1.65;
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+}
+
+strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+em {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--text-primary);
+}
+
+code, kbd, samp, pre {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+}
+
+/* Archival Blockquotes */
+blockquote {
+  border-left: 2px solid var(--accent-sepia);
+  padding: var(--space-4) var(--space-6);
+  background: var(--bg-surface-subtle);
+  margin: var(--space-6) 0;
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+blockquote cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--accent-sepia);
+  font-weight: 600;
+  margin-top: var(--space-3);
+  letter-spacing: 0.02em;
+}
+
+/* Layout Containers with Strict Mathematical Widths */
+.container {
+  width: 100%;
+  max-width: var(--max-width-wide);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+.container-editorial {
+  max-width: var(--max-width-editorial);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-content {
+  max-width: var(--max-width-content);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Generous Spacing for Sections */
+.section {
+  padding: var(--space-16) 0;
+  position: relative;
+}
+
+.section-header {
+  margin-bottom: var(--space-10);
+}
+
+.section-header.centered {
+  text-align: center;
+  max-width: var(--max-width-editorial);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-numeral {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-sepia);
+  margin-bottom: var(--space-3);
+}
+
+.section-divider {
+  border: 0;
+  height: 1px;
+  background: var(--border-subtle);
+  margin: var(--space-12) 0;
+}
+
+/* Academic Subtitle Tag */
+.academic-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-xs);
+  background: var(--bg-surface-elevated);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-default);
+  margin-bottom: var(--space-3);
+}
+
+.academic-tag.sepia {
+  border-color: var(--accent-sepia-border);
+  color: var(--accent-sepia);
+  background: var(--accent-sepia-subtle);
+}
+
+/* Minimalist Editorial Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.92rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--text-primary);
+  color: var(--text-inverted);
+}
+
+.btn-primary:hover {
+  background-color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-default);
+}
+
+.btn-outline:hover {
+  border-color: var(--text-primary);
+  background-color: var(--bg-surface-elevated);
+  text-decoration: none;
+}
+
+.btn-sepia {
+  background-color: var(--accent-sepia);
+  color: #ffffff;
+}
+
+.btn-sepia:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.btn-sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: 0.82rem;
+}
+
+/* Base Surfaces (No Box Overuse) */
+.editorial-panel {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-8);
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

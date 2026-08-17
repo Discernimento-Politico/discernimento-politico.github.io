@@ -1,0 +1,98 @@
+:root {
+  /* Color Palette - High-End Academic & Editorial (Restrained, Monumental) */
+  --bg-primary: #0e1117;
+  --bg-surface: #151b23;
+  --bg-surface-elevated: #1c2430;
+  --bg-surface-subtle: #121820;
+
+  --border-subtle: #212836;
+  --border-default: #303b4d;
+  --border-strong: #48566e;
+
+  --text-primary: #f0f3f6;
+  --text-secondary: #9aa7b8;
+  --text-muted: #627084;
+  --text-inverted: #0e1117;
+
+  /* Sophisticated Editorial Accents (Zero Neon / Zero Childish Tones) */
+  --accent-primary: #3b82f6; /* Restrained Navy/Cobalt */
+  --accent-primary-subtle: rgba(59, 130, 246, 0.08);
+  --accent-primary-border: rgba(59, 130, 246, 0.25);
+
+  --accent-sepia: #c89552; /* Archival Ochre / Document Ink */
+  --accent-sepia-subtle: rgba(200, 149, 82, 0.08);
+  --accent-sepia-border: rgba(200, 149, 82, 0.25);
+
+  --accent-slate: #8fa0b5;
+  --accent-crimson: #c24141; /* Forensic Red (Muted, Serious) */
+  --accent-sage: #4d9a75; /* Empirical Green (Muted, Academic) */
+
+  /* Typography Hierarchy */
+  --font-serif: 'Newsreader', 'Times New Roman', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, Monaco, monospace;
+
+  /* Strict Mathematical Rhythm & Spacing */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.5rem;   /* 24px */
+  --space-6: 2rem;     /* 32px */
+  --space-8: 3rem;     /* 48px */
+  --space-10: 4rem;    /* 64px */
+  --space-12: 5rem;    /* 80px */
+  --space-16: 7rem;    /* 112px */
+
+  /* Reading Width Constraints (Golden Ratio & Optimal Line Length) */
+  --max-width-editorial: 740px;
+  --max-width-content: 960px;
+  --max-width-wide: 1200px;
+  --header-height: 64px;
+
+  /* Radius (Subtle, Precise) */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* Shadows (Natural, Deep, No Neon) */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+
+  --transition-fast: 0.12s ease;
+  --transition-normal: 0.2s ease;
+}
+
+[data-theme="light"] {
+  --bg-primary: #f9f8f6; /* Warm Academic Paper */
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f1ede6;
+  --bg-surface-subtle: #f4efe8;
+
+  --border-subtle: #e5dfd5;
+  --border-default: #d3cbbf;
+  --border-strong: #a89d8d;
+
+  --text-primary: #181a1e;
+  --text-secondary: #4a515e;
+  --text-muted: #747d8c;
+  --text-inverted: #ffffff;
+
+  --accent-primary: #1d4ed8;
+  --accent-primary-subtle: rgba(29, 78, 216, 0.05);
+  --accent-primary-border: rgba(29, 78, 216, 0.2);
+
+  --accent-sepia: #925c1a;
+  --accent-sepia-subtle: rgba(146, 92, 26, 0.06);
+  --accent-sepia-border: rgba(146, 92, 26, 0.2);
+
+  --accent-slate: #526071;
+  --accent-crimson: #991b1b;
+  --accent-sage: #166534;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
